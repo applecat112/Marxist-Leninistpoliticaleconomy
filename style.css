@@ -2,43 +2,194 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f5f7fa;
-    line-height: 1.6;
+    line-height: 1.7;
+    color: #222;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+
+.col-4 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* End Layout */
+
+/* ===== HEADER ===== */
 
 header {
     background: #b71c1c;
     color: white;
-    padding: 20px;
+    padding: 28px 20px;
     text-align: center;
 }
+
+.index-nav {
+    margin-top: 18px;
+}
+
+.index-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.index-nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.primary-menu {
+    list-style-type: none;
+    /* Remove bullets */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.primary-menu>li>a {
+    display: inline-block;
+    padding: 25px 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #fff;
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0;
+    opacity: 0.95;
+    text-align: center;
+}
+
+/* ===== MAIN ===== */
 
 main {
     max-width: 1000px;
     margin: auto;
-    padding: 20px;
+    padding: 25px;
 }
+
+
+/* ===== SECTION CARD ===== */
 
 section {
     background: white;
-    padding: 20px;
+    padding: 24px;
     margin-bottom: 30px;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== HEADINGS ===== */
 
 h2 {
     color: #b71c1c;
+    margin-top: 0;
+    border-left: 5px solid #b71c1c;
+    padding-left: 12px;
 }
+
+h3 {
+    margin-top: 18px;
+    color: #333;
+}
+
+/* ===== TEXT ===== */
+
+p {
+    text-align: justify;
+}
+
+/* ===== LIST ===== */
+
+ul {
+    padding-left: 22px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* ===== BLOCKQUOTE (cho trích dẫn lý luận) ===== */
+
+blockquote {
+    border-left: 4px solid #b71c1c;
+    background: #fafafa;
+    padding: 14px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* ===== IMAGE ===== */
 
 .illustration {
     display: block;
     max-width: 100%;
-    margin: 15px auto;
-    border-radius: 6px;
+    margin: 18px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
+
+/* ===== TABLE (nếu sau này bạn thêm bảng số liệu) ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background: #f0f0f0;
+}
+
+/* ===== FOOTER ===== */
 
 footer {
     background: #222;
     color: #ccc;
     text-align: center;
-    padding: 15px;
+    padding: 18px;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 18px;
+    }
 }
